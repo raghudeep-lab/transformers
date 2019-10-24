@@ -1,0 +1,14 @@
+python ./training/run_sentence.py \
+    --model_type bert \
+    --model_name_or_path bert-base-uncased \
+    --task_name SST-2 \
+    --do_train \
+    --do_eval \
+    --do_lower_case \
+    --data_dir data/sentence_classification/sentiment \
+    --max_seq_length 128 \
+    --per_gpu_eval_batch_size=8   \
+    --per_gpu_train_batch_size=8   \
+    --learning_rate 2e-5 \
+    --num_train_epochs 3.0 \
+    --output_dir /home/raghu/sentiment_bert/
