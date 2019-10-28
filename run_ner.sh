@@ -1,0 +1,13 @@
+python ./training/run_ner.py \
+    --model_type bert \
+    --model_name_or_path bert-base-uncased \
+    --do_train \
+    --do_eval \
+    --do_lower_case \
+    --data_dir data/NER/keyword_extraction \
+    --max_seq_length 128 \
+    --per_gpu_eval_batch_size=8   \
+    --per_gpu_train_batch_size=8   \
+    --learning_rate 2e-5 \
+    --num_train_epochs 7.0 \
+    --output_dir /home/raghu/keyword_bert/
